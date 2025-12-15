@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>TODOLIST</h1>
+
+    <body>
+        <input placeholder="todos" class="js-name-input">
+        <input type="date" class="js-date-input">
+        <button onclick="addTodo()">Add</button>
+        <div class="js-todo-list"></div>
+
+        <script>
+            const todosObjects = [];
+            renderTodos();
+
+            function renderTodos() {
+                let todoHTML = "";
+                for (let i = 0; i < todosObjects.length; i++) {
+                    const todo = todosObjects[i];
+                    // creating html using loops in javascript
+                    const html = `<p>
+                        ${todo.name}
+                         ${todo.date}
+                        <button onclick="todosObjects.splice(${i}, 1); renderTodos()">delete</button>
+                    </p>`;
+                    todoHTML += html;
+                }
+                console.log(todoHTML);
+                document.querySelector('.js-todo-list').innerHTML = todoHTML;
+            }
+
+            function addTodo() {
+                const inputElement = document.querySelector('.js-name-input');
+                const name = inputElement.value;
+                const dateInput = document.querySelector('.js-date-input');
+                const date = dateInput.value;
+
+                todosObjects.push(
+                    
+                {
+                   name,
+                   date
+                }
+                );
+
+                console.log(todosObjects);
+
+                inputElement.value = '';
+
+                renderTodos();
+            }
+        </script>
+    </body>
+
+</html>

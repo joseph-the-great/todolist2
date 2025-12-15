@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(249, 245, 245)
+
+}
+button{
+    background-color: red;
+}
+title{
+    color: rgb(14, 1, 1);
+}
+h1{
+    color: rgb(14, 1, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    size:20px
+}
+text{
+    color:rgb(1, 9, 16)
+}
