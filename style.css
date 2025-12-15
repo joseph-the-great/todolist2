@@ -1,18 +1,75 @@
-body{
-    background-color: rgb(249, 245, 245)
+/* Reset */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+/* Page background & centering */
+body.todo-wrapper {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #0e2a33, #1e4754);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
 }
-button{
-    background-color: red;
+
+/* Title */
+.title {
+  color: black;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
-title{
-    color: rgb(14, 1, 1);
+
+/* Inputs and button row */
+.js-name-input,
+.js-date-input,
+button {
+  height: 36px;
+  padding: 6px 10px;
+  font-size: 14px;
+  margin-right: 6px;
 }
-h1{
-    color: rgb(14, 1, 1);
-    font-family: Arial, Helvetica, sans-serif;
-    size:20px
+
+/* Button */
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
-text{
-    color:rgb(1, 9, 16)
+
+button:hover {
+  background-color: #e0e0e0;
 }
+
+/* Todo list container */
+.js-todo-list {
+  margin-top: 20px;
+  width: 320px;
+}
+
+/* Individual todo item */
+.js-todo-list p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 8px 10px;
+  margin: 6px 0;
+  border-radius: 4px;
+}
+
+/* Delete button */
+.js-todo-list button {
+  background: #ff5c5c;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.js-todo-list button:hover {
+  background: #e04848;
+}
+

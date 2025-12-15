@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head class="title">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>todo</title>
+   
 </head>
 
-<body>
-    <h1>TODOLIST</h1>
+<body class="todo-wrapper">
+<h1 class="title">TODOLIST</h1>
 
-    <body>
         <input placeholder="todos" class="js-name-input">
         <input type="date" class="js-date-input">
         <button onclick="addTodo()">Add</button>
         <div class="js-todo-list"></div>
+</body>
 
         <script>
             const todosObjects = [];
